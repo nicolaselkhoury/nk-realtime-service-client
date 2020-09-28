@@ -1,5 +1,5 @@
 # Introduction
-The **nk-realtime-service** project serves as a pilot project and/or a reference to be used by anyone who wishes to write software and learn [sockets]().
+The **nk-realtime-service** project serves as a pilot project and/or a reference to be used by anyone who wishes to write software and learn [sockets](https://www.tutorialspoint.com/unix_sockets/what_is_socket.htm).
 
 # Pre-requisites
 The client will not work unless the [backend server](https://github.com/nicolaselkhoury/nk-realtime-service) is up and running.
