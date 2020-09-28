@@ -2,7 +2,10 @@ const socketIOClient = require('socket.io-client');
 const sailsIOClient = require('sails.io.js');
 const io = sailsIOClient(socketIOClient);
 
-io.sails.url = `http://${process.env.BACKEND_SRV_HOST}:${process.env.BACKEND_SRV_PORT}`;
+let backendHost = process.env.BACKEND_SRV_HOST || "localhost";
+let backendPort = process.env.BACKEND_SRV_PORT || 1337;
+
+io.sails.url = `http://${backendHost}:${backendPort}`;
 io.sails.autoConnect = false;
 
 let lib = {
