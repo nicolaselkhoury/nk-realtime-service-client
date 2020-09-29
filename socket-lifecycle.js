@@ -7,6 +7,7 @@ let backendPort = process.env.BACKEND_SRV_PORT || 1337;
 
 io.sails.url = `http://${backendHost}:${backendPort}`;
 io.sails.autoConnect = false;
+io.sails.reconnection = true;
 
 let lib = {
     "createSocketClient" : (data) => {
@@ -30,6 +31,10 @@ let lib = {
 
         socket.on("removed_follower_notification", (message) => {
             console.log(`Dear ${data.username} (${socket._raw.id}): ${message}`);
+        });
+
+        socket.on("personal_notification", (message) => {
+            console.log(`(${socket._raw.id}): ${message}`);
         });
     }
 };
