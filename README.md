@@ -16,6 +16,7 @@ In order to run the client, download the repository and perform the following st
 The index file instantiates several clients connecting to the backend server and perform the scenario below:
 
 1. Connect to the backend.
+2. A user authenticates to the server, using a JWT token.
 2. A user follows another user (user joins room).
 3. The user unfollows that user (user leaves room).
 
@@ -26,5 +27,4 @@ This is a simple project and requires further enhancements, which include but no
 
 1. Add more features to highlight the different functionalities of sockets.
 2. Create more realistic scenarios.
-3. User authentication.
 4. Better handling of connection errors.
